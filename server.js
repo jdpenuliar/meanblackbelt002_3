@@ -7,6 +7,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"./client")));
 
+require("./server/config/mongoose.js");
+
 app.listen(8000,function(){
 	console.log("haha 8000");
 });
